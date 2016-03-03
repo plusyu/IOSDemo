@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7d2-2e-6lo">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Data Base View Controller-->
+        <scene sceneID="4Ny-mf-tok">
+            <objects>
+                <viewController id="bVS-vS-YWU" customClass="DataBaseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BSY-cG-2Wj"/>
+                        <viewControllerLayoutGuide type="bottom" id="ttJ-cX-xi7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2OJ-F7-yzw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIz-Jk-mig" customClass="CBHybrid">
+                                <rect key="frame" x="16" y="72" width="368" height="30"/>
+                                <state key="normal" title="增">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="add:" destination="bVS-vS-YWU" eventType="touchUpInside" id="Xgq-Kg-MM1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyR-Wy-A5P" customClass="CBHybrid">
+                                <rect key="frame" x="16" y="130" width="368" height="30"/>
+                                <state key="normal" title="删">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="del:" destination="bVS-vS-YWU" eventType="touchUpInside" id="dSt-K7-xtC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1t-yc-ADG" customClass="CBHybrid">
+                                <rect key="frame" x="16" y="213" width="368" height="30"/>
+                                <state key="normal" title="改">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="update:" destination="bVS-vS-YWU" eventType="touchUpInside" id="nyS-38-Xa4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ls8-Nv-rAL" customClass="CBHybrid">
+                                <rect key="frame" x="16" y="285" width="368" height="30"/>
+                                <state key="normal" title="查">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="query:" destination="bVS-vS-YWU" eventType="touchUpInside" id="ZCe-Qc-F6R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="85g-uW-BPD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XWh-F0-uUw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1337" y="200"/>
+        </scene>
+        <!--工具-->
+        <scene sceneID="szX-Ru-bNl">
+            <objects>
+                <viewController id="Jjb-0T-Kgx" customClass="UtilViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dFz-OP-zoh"/>
+                        <viewControllerLayoutGuide type="bottom" id="aRz-kZ-o0E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="84q-IM-4qk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1y-2s-caP" customClass="CBHybrid">
+                                <rect key="frame" x="56" y="96" width="212" height="30"/>
+                                <state key="normal" title="自定义NSLog">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showNSLog:" destination="Jjb-0T-Kgx" eventType="touchUpInside" id="dri-up-G1X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVG-Qq-vZ1" customClass="CBHybrid">
+                                <rect key="frame" x="63" y="134" width="199" height="30"/>
+                                <state key="normal" title="自定义异常">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showExcept:" destination="Jjb-0T-Kgx" eventType="touchUpInside" id="QCs-xL-Grh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2R-Je-M3J" customClass="CBHybrid">
+                                <rect key="frame" x="139" y="187" width="47" height="30"/>
+                                <state key="normal" title="Mantle">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="187" width="292" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="parserJson:" destination="Jjb-0T-Kgx" eventType="touchUpInside" id="EXD-Ne-ujR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnM-l3-EA0" customClass="CBHybrid">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="网络判断">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="225" width="292" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="isNetWork:" destination="Jjb-0T-Kgx" eventType="touchUpInside" id="eAU-F4-SCc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEI-Ss-ll2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="是否第一次运行">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="263" width="292" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="isFirstRun:" destination="Jjb-0T-Kgx" eventType="touchUpInside" id="Wie-NF-Wd5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQy-XE-yzK">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Block测试">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="301" width="292" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="testBlock:" destination="Jjb-0T-Kgx" eventType="touchUpInside" id="V4s-bD-X6W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hi4-gh-CiA">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Debug">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="369" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="debug:" destination="Jjb-0T-Kgx" eventType="touchUpInside" id="pR6-gy-ccV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="bnM-l3-EA0"/>
+                                <exclude reference="SEI-Ss-ll2"/>
+                                <exclude reference="vQy-XE-yzK"/>
+                                <exclude reference="hi4-gh-CiA"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="bnM-l3-EA0"/>
+                                <include reference="SEI-Ss-ll2"/>
+                                <include reference="vQy-XE-yzK"/>
+                                <include reference="hi4-gh-CiA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="工具" id="Acb-o8-nck"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nEx-07-eRl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1191" y="-469.5"/>
+        </scene>
+        <!--File View Controller-->
+        <scene sceneID="hKG-r5-J1j">
+            <objects>
+                <viewController id="tgj-UW-RX8" customClass="FileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GHr-dl-yE2"/>
+                        <viewControllerLayoutGuide type="bottom" id="k0W-i5-NN5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tuu-ut-611">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cc8-vE-5Ed" customClass="CBHybrid">
+                                <rect key="frame" x="16" y="77" width="368" height="30"/>
+                                <state key="normal" title="数据库">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bVS-vS-YWU" kind="show" id="58U-AP-qcz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVU-X8-a04">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="下载文件">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="146" width="277" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="download:" destination="tgj-UW-RX8" eventType="touchUpInside" id="Drg-h5-c9f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69S-Nm-2hX">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="暂停">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="214" width="277" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stop:" destination="tgj-UW-RX8" eventType="touchUpInside" id="UD7-NQ-Rtf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUD-e1-hAy">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="98" y="666" width="46" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="xVU-X8-a04"/>
+                                <exclude reference="69S-Nm-2hX"/>
+                                <exclude reference="yUD-e1-hAy"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="xVU-X8-a04"/>
+                                <include reference="69S-Nm-2hX"/>
+                                <include reference="yUD-e1-hAy"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="xPw-UG-1ih"/>
+                    <connections>
+                        <outlet property="stopText" destination="69S-Nm-2hX" id="Leh-bO-nYn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w3c-If-0bQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1834.5" y="-469.5"/>
+        </scene>
+        <!--Auto Layout Controller-->
+        <scene sceneID="Hl5-XI-7v8">
+            <objects>
+                <viewController id="9HM-5J-9v4" customClass="AutoLayoutController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8hq-Nz-WkG"/>
+                        <viewControllerLayoutGuide type="bottom" id="G2Q-of-h5g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YNn-ks-CiA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvO-nK-ld6" customClass="CBHybrid">
+                                <rect key="frame" x="0.0" y="64" width="600" height="30"/>
+                                <state key="normal" title="代码">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="b1o-G0-78j" kind="show" id="QUm-Ea-DQS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="LvO-nK-ld6" secondAttribute="trailing" constant="-16" id="ebu-hO-GSf"/>
+                            <constraint firstItem="LvO-nK-ld6" firstAttribute="leading" secondItem="YNn-ks-CiA" secondAttribute="leadingMargin" constant="-16" id="gXK-Bd-dUl"/>
+                            <constraint firstItem="LvO-nK-ld6" firstAttribute="top" secondItem="8hq-Nz-WkG" secondAttribute="bottom" id="z2f-bc-hgN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mWW-DK-8dB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C66-jd-Yuz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181" y="-530"/>
+        </scene>
+        <!--Code Auto Layout-->
+        <scene sceneID="KxD-Wv-IYU">
+            <objects>
+                <viewController storyboardIdentifier="CodeAutoLayout" id="b1o-G0-78j" customClass="CodeAutoLayout" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7R8-Wt-1n5"/>
+                        <viewControllerLayoutGuide type="bottom" id="UPr-Jj-Fn0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c3b-tZ-HkB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hAx-7u-ieB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="-530"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="gyr-0n-h3a">
+            <objects>
+                <tableViewController id="Dby-v4-F8t" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FTV-00-S0c">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="jzf-Zx-ALz" style="IBUITableViewCellStyleDefault" id="c2m-5U-UiZ">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c2m-5U-UiZ" id="G0m-eS-Gwb">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Titsssssle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jzf-Zx-ALz">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Dby-v4-F8t" id="Zgr-od-Ont"/>
+                            <outlet property="delegate" destination="Dby-v4-F8t" id="vcv-vh-aDw"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mat-g2-izB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2550" y="559"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0CT-wn-Ykw">
+            <objects>
+                <navigationController id="7d2-2e-6lo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zUI-BN-L9M">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="3ta-jk-WPk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXy-My-CAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3247" y="-503"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qGz-8I-Q7k">
+            <objects>
+                <viewController id="Bch-nL-IhF" customClass="RACViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lVo-ad-G4G"/>
+                        <viewControllerLayoutGuide type="bottom" id="f6v-15-DbR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2iX-sa-W0a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sBu-hK-VAr">
+                                <rect key="frame" x="16" y="83" width="256" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82D-LJ-Y6l">
+                                <rect key="frame" x="280" y="83" width="30" height="30"/>
+                                <state key="normal" title="GO">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vYG-Gd-Ogw">
+                                <rect key="frame" x="16" y="121" width="294" height="471"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchResultTable" destination="vYG-Gd-Ogw" id="tH0-NT-9GT"/>
+                        <outlet property="searchSubmit" destination="82D-LJ-Y6l" id="jkI-8S-ScJ"/>
+                        <outlet property="searchTextField" destination="sBu-hK-VAr" id="7QL-9R-gpW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePS-hV-MUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3149" y="177"/>
+        </scene>
+        <!--Lyrics View Controller-->
+        <scene sceneID="OsB-Fs-uIn">
+            <objects>
+                <viewController id="fU1-Wu-yq3" customClass="LyricsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fbO-my-xdk"/>
+                        <viewControllerLayoutGuide type="bottom" id="3GJ-Wp-0dC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sQd-VZ-zDS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tLH-VN-g0F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2588" y="377"/>
+        </scene>
+        <!--Core Animation Controller-->
+        <scene sceneID="6Q1-f3-few">
+            <objects>
+                <viewController id="wq9-vN-OmW" customClass="CoreAnimationController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vmT-O0-9cC"/>
+                        <viewControllerLayoutGuide type="bottom" id="SEK-CE-z4L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="703-tI-S5o">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ed-fA-5wU">
+                                <rect key="frame" x="16" y="72" width="30" height="30"/>
+                                <state key="normal" title="位移">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="move:" destination="wq9-vN-OmW" eventType="touchUpInside" id="KtU-UP-FkU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aO8-C0-uYh">
+                                <rect key="frame" x="70" y="72" width="30" height="30"/>
+                                <state key="normal" title="旋转">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Rotation:" destination="wq9-vN-OmW" eventType="touchUpInside" id="LxD-zi-aiB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6i-it-LxY">
+                                <rect key="frame" x="118" y="72" width="30" height="30"/>
+                                <state key="normal" title="缩放">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scale:" destination="wq9-vN-OmW" eventType="touchUpInside" id="GjE-rw-r2X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mh4-HO-QBT">
+                                <rect key="frame" x="189" y="72" width="30" height="30"/>
+                                <state key="normal" title="组合">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="group:" destination="wq9-vN-OmW" eventType="touchUpInside" id="FLt-tw-pMz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAw-QW-kYx">
+                                <rect key="frame" x="249" y="72" width="95" height="30"/>
+                                <state key="normal" title="KeyAnimation">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="key:" destination="wq9-vN-OmW" eventType="touchUpInside" id="Dbb-f1-OWP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGz-z1-mHz">
+                                <rect key="frame" x="-3" y="110" width="103" height="30"/>
+                                <state key="normal" title="关键动画-value">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="keyValue:" destination="wq9-vN-OmW" eventType="touchUpInside" id="ZfV-1O-gcH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDw-fc-aEO">
+                                <rect key="frame" x="118" y="110" width="45" height="30"/>
+                                <state key="normal" title="五角星">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="drawStar:" destination="wq9-vN-OmW" eventType="touchUpInside" id="f4W-cn-YQA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mvn-EY-Hwt">
+                                <rect key="frame" x="200" y="110" width="42" height="30"/>
+                                <state key="normal" title="Greed">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="greed:" destination="wq9-vN-OmW" eventType="touchUpInside" id="yDx-Ff-N2h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRa-TC-gnC">
+                                <rect key="frame" x="8" y="140" width="45" height="30"/>
+                                <state key="normal" title="进度条">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showProgress:" destination="wq9-vN-OmW" eventType="touchUpInside" id="lBg-cf-a59"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="drawStarText" destination="pDw-fc-aEO" id="XSq-Mo-PR1"/>
+                        <outlet property="greedText" destination="Mvn-EY-Hwt" id="2Rb-q2-zA4"/>
+                        <outlet property="groupText" destination="mh4-HO-QBT" id="xCZ-3I-Ld9"/>
+                        <outlet property="keyText" destination="XAw-QW-kYx" id="cp8-gI-knt"/>
+                        <outlet property="keyValueText" destination="NGz-z1-mHz" id="oOZ-YF-ujN"/>
+                        <outlet property="moveText" destination="9Ed-fA-5wU" id="1Vq-Zc-A6Z"/>
+                        <outlet property="rotationText" destination="aO8-C0-uYh" id="BV4-rE-H6j"/>
+                        <outlet property="scaleText" destination="t6i-it-LxY" id="PE2-hc-ILQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ves-zP-zNm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1976" y="369"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="duJ-l7-lnu"/>
+                        <viewControllerLayoutGuide type="bottom" id="rAd-6L-kuw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxa-2t-oTz" customClass="CBHybrid">
+                                <rect key="frame" x="16" y="150" width="288" height="34"/>
+                                <color key="tintColor" red="0.98017989569999997" green="1" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="动画">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wq9-vN-OmW" kind="show" id="ZUx-eH-dZP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIe-YR-VLh" customClass="CBHybrid">
+                                <rect key="frame" x="16" y="204" width="288" height="34"/>
+                                <color key="tintColor" red="0.98017989569999997" green="1" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="文件">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tgj-UW-RX8" kind="show" id="HQl-ZD-rBj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2im-Mc-s7e" customClass="CBHybrid">
+                                <rect key="frame" x="16" y="246" width="288" height="30"/>
+                                <state key="normal" title="工具">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Jjb-0T-Kgx" kind="show" id="YyP-LU-4ry"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEk-Ad-T4W" customClass="CBHybrid">
+                                <rect key="frame" x="16" y="284" width="288" height="30"/>
+                                <state key="normal" title="UI">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Hbh-Md-aQd" kind="show" id="QZK-WD-3FH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFD-Gj-ZUK" customClass="CBHybrid">
+                                <rect key="frame" x="16" y="81" width="288" height="34"/>
+                                <color key="tintColor" red="0.98017989569999997" green="1" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="下载">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9sd-Qz-5sS" kind="show" id="d3I-cw-4Oo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhR-a9-2EO">
+                                <rect key="frame" x="16" y="322" width="288" height="30"/>
+                                <state key="normal" title="ReactiveCocoa">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Bch-nL-IhF" kind="show" id="Psq-B5-cBJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dP3-x2-QAt">
+                                <rect key="frame" x="137" y="360" width="60" height="30"/>
+                                <state key="normal" title="歌词解析">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fU1-Wu-yq3" kind="show" id="ii3-QM-kqQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYW-GC-rWa">
+                                <rect key="frame" x="137" y="398" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Dby-v4-F8t" kind="showDetail" id="E0Z-aO-KWM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Sn-nM-BhI">
+                                <rect key="frame" x="137" y="460" width="39" height="30"/>
+                                <state key="normal" title="Block">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5K7-3L-Bs4" kind="show" id="kpy-YL-3lu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8c6-al-4Lj">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="130" y="562" width="46" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="8c6-al-4Lj"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="8c6-al-4Lj"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cxh-4J-zgZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2628" y="-511"/>
+        </scene>
+        <!--Lighter Table View Controller-->
+        <scene sceneID="rrs-BP-LcC">
+            <objects>
+                <tableViewController id="9sd-Qz-5sS" customClass="LighterTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="22" sectionFooterHeight="22" id="ff3-kG-iJR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LighterCell" rowHeight="130" id="qdr-qo-4nY" customClass="LighterCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qdr-qo-4nY" id="mgH-NR-u5a">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlU-Oz-NVF">
+                                            <rect key="frame" x="58" y="20" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCj-mb-0ZZ">
+                                            <rect key="frame" x="489" y="20" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7u2-WM-KvI">
+                                            <rect key="frame" x="58" y="75" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUu-G2-l94">
+                                            <rect key="frame" x="489" y="69" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="one" destination="nlU-Oz-NVF" id="Oh6-Au-idp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bkI-iw-t8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2184" y="-75.75"/>
+        </scene>
+        <!--MyUI View Controller-->
+        <scene sceneID="3Xd-G4-722">
+            <objects>
+                <viewController id="Hbh-Md-aQd" customClass="MyUIViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZES-m9-c7M"/>
+                        <viewControllerLayoutGuide type="bottom" id="w2W-qR-ebt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r63-0C-Mtp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzc-5s-N5P" customClass="CBHybrid">
+                                <rect key="frame" x="16" y="72" width="293" height="30"/>
+                                <state key="normal" title="键盘">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showKeyBorad:" destination="Hbh-Md-aQd" eventType="touchUpInside" id="FLA-j4-RTb"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1M-cl-wIE">
+                                <rect key="frame" x="114" y="123" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u0E-b4-9QM" customClass="CBHybrid">
+                                <rect key="frame" x="16" y="161" width="277" height="30"/>
+                                <state key="normal" title="对话框">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlertView:" destination="Hbh-Md-aQd" eventType="touchUpInside" id="dXk-xy-PvD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daj-S5-zOI" customClass="CBHybrid">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="AutoLayout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="199" width="277" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="9HM-5J-9v4" kind="show" id="QST-tg-edU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lZ-Pd-6SY" customClass="CBHybrid">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="测试网络">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="131" y="334" width="60" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="testNetWork:" destination="Hbh-Md-aQd" eventType="touchUpInside" id="4fx-O3-dHb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6m9-Lu-uKj" customClass="CBHybrid">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="HUD">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="372" width="277" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="showProgress:" destination="Hbh-Md-aQd" eventType="touchUpInside" id="ZMs-Lk-zSq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8C-zy-Ftp" customClass="CBHybrid">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="模拟登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="486" width="293" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="didTapLogin:" destination="Hbh-Md-aQd" eventType="touchUpInside" id="3gb-4c-A26"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjw-hu-qaC" customClass="CBHybrid">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="上传">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="237" width="277" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="didTapUpload:" destination="Hbh-Md-aQd" eventType="touchUpInside" id="v7w-YO-6bu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWU-ke-80c" customClass="CBHybrid">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="下载">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="296" width="277" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="didTapDownload:" destination="Hbh-Md-aQd" eventType="touchUpInside" id="2dz-BC-mUg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRN-R8-3MJ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="模拟暂停">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="429" width="277" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="didStop:" destination="Hbh-Md-aQd" eventType="touchUpInside" id="hkC-0Z-i9b"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e0z-Zi-cZD">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZ1-uD-j2D">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Code AutoLayout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="131" y="560" width="120" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="B5k-tL-fu7" kind="show" id="XoG-aK-ApE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6Q-d9-3vq" customClass="CBHybrid">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9XN-on-QcH"/>
+                                </constraints>
+                                <state key="normal" title="touch事件传递机制">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9XN-on-QcH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="9XN-on-QcH"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="showTouchController:" destination="Hbh-Md-aQd" eventType="touchUpInside" id="nng-6q-vor"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="a6Q-d9-3vq" secondAttribute="trailing" id="DYf-rC-XTR"/>
+                            <constraint firstItem="w2W-qR-ebt" firstAttribute="top" secondItem="a6Q-d9-3vq" secondAttribute="bottom" id="QZr-f9-rol"/>
+                            <constraint firstItem="a6Q-d9-3vq" firstAttribute="leading" secondItem="r63-0C-Mtp" secondAttribute="leading" id="gAH-oI-f7N"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="daj-S5-zOI"/>
+                                <exclude reference="4lZ-Pd-6SY"/>
+                                <exclude reference="6m9-Lu-uKj"/>
+                                <exclude reference="G8C-zy-Ftp"/>
+                                <exclude reference="Sjw-hu-qaC"/>
+                                <exclude reference="WWU-ke-80c"/>
+                                <exclude reference="JRN-R8-3MJ"/>
+                                <exclude reference="e0z-Zi-cZD"/>
+                                <exclude reference="sZ1-uD-j2D"/>
+                                <exclude reference="a6Q-d9-3vq"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="QZr-f9-rol"/>
+                                <exclude reference="DYf-rC-XTR"/>
+                                <exclude reference="gAH-oI-f7N"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="daj-S5-zOI"/>
+                                <include reference="4lZ-Pd-6SY"/>
+                                <include reference="6m9-Lu-uKj"/>
+                                <include reference="G8C-zy-Ftp"/>
+                                <include reference="Sjw-hu-qaC"/>
+                                <include reference="WWU-ke-80c"/>
+                                <include reference="JRN-R8-3MJ"/>
+                                <include reference="e0z-Zi-cZD"/>
+                                <include reference="sZ1-uD-j2D"/>
+                                <include reference="a6Q-d9-3vq"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="QZr-f9-rol"/>
+                                <include reference="DYf-rC-XTR"/>
+                                <include reference="gAH-oI-f7N"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="t6L-Vn-wjJ"/>
+                    <connections>
+                        <outlet property="imageView" destination="e0z-Zi-cZD" id="kS5-kQ-LrR"/>
+                        <outlet property="stopText" destination="JRN-R8-3MJ" id="SNy-Vc-sHL"/>
+                        <outlet property="textView" destination="y1M-cl-wIE" id="vwl-nY-ifM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hwz-iO-y21" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-559.5" y="-469.5"/>
+        </scene>
+        <!--Code Layout View Controller-->
+        <scene sceneID="5ql-IO-BTR">
+            <objects>
+                <viewController id="B5k-tL-fu7" customClass="CodeLayoutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ckh-TE-diJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Iiv-Zm-hiI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GNt-Oz-37e">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Zt-uP-QmS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-526.5" y="180.75"/>
+        </scene>
+        <!--Block View Controller-->
+        <scene sceneID="0t4-6E-MFS">
+            <objects>
+                <viewController id="5K7-3L-Bs4" customClass="BlockViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SFS-0J-qSy"/>
+                        <viewControllerLayoutGuide type="bottom" id="2kF-qj-xjG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T6O-kV-jyw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99g-92-6JE">
+                                <rect key="frame" x="286" y="86" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="myBlockAction:" destination="5K7-3L-Bs4" eventType="touchUpInside" id="ifZ-8b-QJn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="blockAction" destination="99g-92-6JE" id="9Ro-YV-6kb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B2u-GO-Izk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181" y="142"/>
+        </scene>
+    </scenes>
+</document>
